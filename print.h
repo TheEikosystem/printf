@@ -14,7 +14,7 @@ typedef struct format
 	int (*call_fun)(va_list);
 } convert;
 
-
 int _printf(const char *format, ...);
+int set_flags(const char *format, int *i);
 
 #endif 
