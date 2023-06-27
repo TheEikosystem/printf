@@ -2,7 +2,7 @@
 
 /************************* PRINT REVERSE *************************/
 /**
-* handle_r - A function that prints a string in reverse
+* handle_rev - A function that prints a string in reverse
 * @r: string.
 * Return: number of printed char.
 */
@@ -30,7 +30,7 @@ int handle_rev(va_list r)
  * @args: the string to be converted to rot13 and printed
  * Return: Numbers of chars printed
  */
-int get_rot13string(va_list args, char buffer)
+int print_rot13string(va_list args, char buffer)
 {
 	int i;
 	char *str;

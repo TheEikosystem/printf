@@ -8,9 +8,8 @@
 /**
  * handle_char - handle character formats
  * @c: variable list for %c format
- * Return: return 1 
+ * Return: return 1
  */
-
 int handle_char(va_list c)
 {
 	char character = (char)va_arg(c, int);
@@ -56,7 +55,7 @@ int print_percent(__attribute__((unused))va_list valist)
 
 /************************* PRINT INT *************************/
 /**
- * handle_int - a function to print integers
+ * set_int - a function to print integers
  * @i: input
  * Return: return the no of counts.
  */
@@ -121,6 +120,6 @@ int get_binary(va_list b)
 			_putchar('0' + a[j]);
 			count++;
 		}
-	}	
+	}
 	return (count);
 }

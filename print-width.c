@@ -8,25 +8,25 @@
  */
 int print_width(const char *format, int *i, va_list valist)
 {
-	    int curr_i;
-	    int width = 0;
+	int curr_i;
+	int width = 0;
 
-	    for (curr_i = *i + 1; format[curr_i] != '\0'; curr_i++)
-	    {
-		        if (is_digit(format[curr_i]))
-		        {
-			            width *= 10;
-			            width += format[curr_i] - '0';
-		        }
-		  else if (format[curr_i] == '*')
-		  {
-			      curr_i++;
-			      width = va_arg(valist, int);
-			      break;
-		  }
-		  else
+	for (curr_i = *i + 1; format[curr_i] != '\0'; curr_i++)
+	{
+		if (is_digit(format[curr_i]))
+		{
+			width *= 10;
+			width += format[curr_i] - '0';
+		}
+		else if (format[curr_i] == '*')
+		{
+			curr_i++;
+			width = va_arg(valist, int);
 			break;
-	    }
-	    *i = curr_i - 1;
-	    return (width);
+		}
+		else
+			break;
+	}
+	*i = curr_i - 1;
+	return (width);
 }
